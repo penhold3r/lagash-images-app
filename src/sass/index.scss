@@ -1,0 +1,33 @@
+@import './includes/mixines';
+@import './includes/variables';
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	background: #ddd;
+	margin: 0;
+	font-family: $main-font;
+
+	.content {
+		position: relative;
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@import './components/header';
+@import './components/loading';
+@import './components/image-list';
+@import './components/collection-list';
+@import './components/edit-modal';

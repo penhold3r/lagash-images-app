@@ -1,0 +1,11 @@
+$primary: #1e9bd1;
+$primary-light: #57c0d3;
+$secondary: #fdb32b;
+
+$dark: #101616;
+$grey: desaturate(lighten($dark, 30%), 30%);
+$grey-light: lighten($grey, 30%);
+$grey-dark: darken($grey, 15%);
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,800,800i&display=swap');
+$main-font: 'Nunito', sans-serif;

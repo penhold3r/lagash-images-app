@@ -1,0 +1,79 @@
+.edit-modal {
+	background: rgba($dark, 0.5);
+	display: flex;
+	height: 100vh;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	z-index: 99;
+
+	&__content {
+		background: #fff;
+		border-radius: 3px;
+		margin: auto;
+		min-width: 500px;
+		padding: 1.5rem 2rem 2rem;
+		position: relative;
+
+		&__title {
+			color: $primary;
+			margin: 0 0 1rem;
+		}
+
+		&__form {
+			display: flex;
+			flex-direction: column;
+
+			.form-input {
+				border: 1px solid $grey-light;
+				padding: 0.5rem 1rem;
+				margin: 0 0 1rem;
+			}
+
+			.form-buttons {
+				display: flex;
+				justify-content: flex-end;
+
+				&__btn {
+					border-radius: 3px;
+					cursor: pointer;
+					font-size: 0.75rem;
+					letter-spacing: 0.05rem;
+					margin-left: 0.5rem;
+					outline: none;
+					padding: 0.5rem 1rem;
+					text-align: center;
+					text-transform: uppercase;
+
+					&.cancel {
+						background: #fff;
+						border: 1px solid $secondary;
+						color: $secondary;
+
+						&:hover {
+							opacity: 0.7;
+						}
+					}
+
+					&.save {
+						align-items: center;
+						background: $secondary;
+						border: none;
+						color: #fff;
+						display: flex;
+						transition: all 0.3s;
+
+						&:hover {
+							background: $grey;
+						}
+
+						span {
+							margin-right: 0.25rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}

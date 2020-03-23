@@ -1,0 +1,32 @@
+.loading {
+	display: flex;
+	flex-direction: column;
+	margin: 6rem auto;
+
+	.spinner {
+		animation: spin 0.8s linear infinite;
+		border: 3px solid $primary;
+		border-right: 3px solid $primary-light;
+		height: 50px;
+		width: 50px;
+		margin: auto;
+		border-radius: 50%;
+		position: relative;
+	}
+
+	span {
+		margin: 1rem auto;
+		text-align: center;
+		font-size: 1.5rem;
+		color: $primary;
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

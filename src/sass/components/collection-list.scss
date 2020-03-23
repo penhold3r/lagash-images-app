@@ -1,0 +1,113 @@
+.collection-list {
+	animation: fade linear 0.5s;
+	display: flex;
+	flex-direction: column;
+	margin: 2rem auto;
+	max-width: 900px;
+	padding: 0 1rem;
+
+	.empty {
+		margin: 0 auto;
+		text-align: center;
+		color: $primary;
+	}
+
+	&__title {
+		color: $grey;
+		margin: 0 0 1rem;
+		text-align: center;
+	}
+
+	&__card {
+		background: #fff;
+		border-radius: 3px;
+		display: flex;
+		margin: 0 0 1rem;
+		overflow: hidden;
+		position: relative;
+
+		&__save {
+			border-radius: 50%;
+			color: #fff;
+			cursor: pointer;
+			height: 40px;
+			padding: 0.5rem;
+			position: absolute;
+			right: 0.25rem;
+			top: 0.25rem;
+			width: 40px;
+			z-index: 2;
+
+			.icon {
+				color: $secondary;
+				font-size: 1.5rem;
+				line-height: 1;
+				transition: all 0.4s;
+			}
+
+			&:hover {
+				background: rgba($dark, 0.5);
+			}
+
+			&:active {
+				.icon {
+					transform: scale(0.8);
+				}
+			}
+		}
+
+		&__image {
+			display: block;
+			object-fit: cover;
+			position: relative;
+			width: 30%;
+			z-index: 1;
+		}
+
+		&__description {
+			font-size: 1rem;
+			font-weight: normal;
+			margin: 0;
+			padding: 50px 1rem 50px;
+			position: relative;
+			z-index: 1;
+		}
+
+		&__actions {
+			position: absolute;
+			right: 1rem;
+			bottom: 1rem;
+			display: flex;
+
+			.action-btn {
+				background: $secondary;
+				border-radius: 50%;
+				cursor: pointer;
+				height: 30px;
+				padding: 0.25rem;
+				width: 30px;
+				margin-left: 0.5rem;
+				display: flex;
+				transition: all 0.3s;
+
+				.icon {
+					margin: auto;
+					color: #fff;
+					font-size: 1rem;
+					line-height: 1;
+					transition: all 0.4s;
+				}
+
+				&:hover {
+					background: $grey;
+				}
+
+				&:active {
+					.icon {
+						transform: scale(0.8);
+					}
+				}
+			}
+		}
+	}
+}

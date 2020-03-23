@@ -1,0 +1,122 @@
+.site-header {
+	background: $dark;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+
+	&__container {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		max-width: 900px;
+		padding: 0.5rem 1rem;
+
+		&__logo {
+			display: flex;
+			margin: 0;
+			color: $primary;
+			font-size: 1.25rem;
+
+			img {
+				margin: 0 1rem 0 0;
+				height: 30px;
+			}
+		}
+
+		&__nav {
+			display: flex;
+			justify-content: flex-end;
+
+			a {
+				color: #fff;
+				font-family: $main-font;
+				font-weight: normal;
+				font-size: 0.8rem;
+				letter-spacing: 0.05rem;
+				padding: 0.25rem 0.5rem;
+				text-decoration: none;
+				text-transform: uppercase;
+				transition: all 0.3s;
+
+				&:hover {
+					color: $secondary;
+				}
+
+				.icon {
+					display: none;
+				}
+
+				@include phone {
+					.icon {
+						display: inline-block;
+						font-size: 1.25rem;
+					}
+					span {
+						display: none;
+					}
+				}
+			}
+		}
+
+		.search {
+			width: 250px;
+
+			@include tablet {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				background: $dark;
+				padding: 1rem;
+			}
+
+			&__form {
+				display: flex;
+				margin: 0;
+				position: relative;
+				width: 100%;
+
+				&__input {
+					background: transparent;
+					border: none;
+					border-bottom: 1px solid $primary-light;
+					color: $grey-light;
+					display: block;
+					font-family: $main-font;
+					padding: 0.25rem;
+					transition: all 0.3s;
+					width: 100%;
+
+					@include placeholder {
+						color: $grey;
+						transition: all 0.3s;
+					}
+
+					&:focus {
+						background: $grey;
+						outline: none;
+
+						@include placeholder {
+							padding: 0 0 0 1rem;
+							opacity: 0;
+						}
+					}
+				}
+
+				&__submit {
+					background: transparent;
+					border: none;
+					color: $grey-light;
+					cursor: pointer;
+					transition: all 0.3s;
+
+					&:hover {
+						color: $primary-light;
+					}
+				}
+			}
+		}
+	}
+}
