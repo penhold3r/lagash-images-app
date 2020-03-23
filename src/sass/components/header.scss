@@ -92,6 +92,10 @@
 					@include placeholder {
 						color: $grey;
 						transition: all 0.3s;
+
+						@include tablet {
+							font-size: 1.2rem;
+						}
 					}
 
 					&:focus {

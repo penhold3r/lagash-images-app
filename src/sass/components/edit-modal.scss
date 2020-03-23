@@ -12,9 +12,10 @@
 		background: #fff;
 		border-radius: 3px;
 		margin: auto;
-		min-width: 500px;
+		max-width: 500px;
 		padding: 1.5rem 2rem 2rem;
 		position: relative;
+		width: 90%;
 
 		&__title {
 			color: $primary;
